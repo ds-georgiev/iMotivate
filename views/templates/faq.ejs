@@ -1,0 +1,40 @@
+<div class="faq-container">
+    <div class="accordion">
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How Much Exercise Should You Be Getting?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>You can reap all the physical and mental health benefits of exercise with 30-minutes of moderate exercise five times a week. Two 15-minute or even three 10-minute exercise sessions can also work just as well.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Can your platform substitute for face-to-face therapy?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Although our platform could be helpful for many, we are not licensed psychologists We advise consulting with a certified  professional. Our platform can be used as an extra exercise combined with therapy if necessary.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Why is it so important to exercise our brains?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Our brains are composed of different areas and functions, and we can strengthen them through mental exercise- or they get atrophied for lack of practice. The benefits are both short-term (improved concentration and memory, sustained mental clarity under stressful situations…), and long-term (creation of a “brain reserve” that help protect us against potential problems such as Alzheimer’s).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+        const itemToggle = this.getAttribute('aria-expanded');
+        
+        for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+        }
+        
+        if (itemToggle == 'false') {
+            this.setAttribute('aria-expanded', 'true');
+        }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
