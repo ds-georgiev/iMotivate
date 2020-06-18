@@ -1,0 +1,152 @@
+<%- include ('../templates/general/head') -%>
+<body>
+   <%- include ('../templates/header', {loggedIn : loggedIn, slectedIndex : 2}) -%>
+   <h1>Get inspired by others</h1>
+   <!-- Slideshow container -->
+   <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+         <div class="content-two-col story">
+            <div class="content-col-left">
+               <img src="../../public/assets/images/stories_images/story_1.jpg">
+            </div>
+            <div class="content-col-right stories">
+               <div class="user-profile">
+                  <div class="user-info name">
+                     <h1>John Doe</h1>
+                  </div>
+                  <div class="user-info info">
+                     I have used the platform for the past 6 months. I am really satisfied with the results and it really helped me improve my mental state.<br><br> The results reflected in my professional life. I feel more motivate and my productivity has increased drasticaly.
+                  </div>
+                  <div class="user-info total-points">
+                     <h2>Points: 569</h2>
+                     <span>Above average!!!</span>
+                  </div>
+                  <div class="user-info badges">
+                     <div class="badges-list story-1">
+                        <i class="fas fa-baby"></i>
+                        <i class="fab fa-grav"></i>
+                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fa fa-fire"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-fire"></i>
+                     </div>
+                  </div>
+                  <div class="user-info fav-exercise">
+                     <iframe width="350" height="200" src="https://www.youtube.com/embed/1JZWIGT2EaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="text">Caption Text</div> -->
+      </div>
+      <div class="mySlides fade">
+         <div class="content-two-col story">
+            <div class="content-col-left">
+               <img src="../../public/assets/images/stories_images/story_2.jpg">
+            </div>
+            <div class="content-col-right stories">
+               <div class="user-profile">
+                  <div class="user-info name">
+                     <h1>Sara Stones</h1>
+                  </div>
+                  <div class="user-info info">
+                     My experience with the platform began 10 months ago when I was having a very stressful period of my life, trying to combine school and work. This platform made a big difference in my mood, it has helped me with my sleeping problems that came from the stress during this period.
+                     <br><br>
+                     It has really improved my life as a whole, relieving the stress was an obstacle in my workplace, my relationships with people.
+                  </div>
+                  <div class="user-info total-points">
+                     <h2>Points: 360</h2>
+                     <span>Average!!!</span>
+                  </div>
+                  <div class="user-info badges">
+                     <div class="badges-list story-2">
+                        <i class="fas fa-baby"></i>
+                        <i class="fab fa-grav"></i>
+                        <i class="fas fa-graduation-cap"></i>
+                     </div>
+                  </div>
+                  <div class="user-info fav-exercise">
+                     <iframe width="350" height="200" src="https://www.youtube.com/embed/hJbRpHZr_d0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="text">Caption Two</div> -->
+      </div>
+      <div class="mySlides fade">
+         <div class="content-two-col story">
+            <div class="content-col-left">
+               <img src="../../public/assets/images/stories_images/story_3.jpg">
+            </div>
+            <div class="content-col-right stories">
+               <div class="user-profile">
+                  <div class="user-info name">
+                     <h1>John Smith</h1>
+                  </div>
+                  <div class="user-info info">
+                     I found about this platform only 2 months ago from a friend and yet it has already improved many parts of my life. Before starting out my journey, I was experiencing anxiety attacks on a daily basis. Since I have been using this platform, following the programs and taking the daily tips, I experience that anxiety attacks much less than before.
+                  </div>
+                  <div class="user-info total-points">
+                     <h2>Points: 620</h2>
+                     <span>Way above average!!!</span>
+                  </div>
+                  <div class="user-info badges">
+                     <div class="badges-list story-3">
+                        <i class="fas fa-baby"></i>
+                        <i class="fab fa-grav"></i>
+                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-fire"></i>
+                     </div>
+                  </div>
+                  <div class="user-info fav-exercise">
+                     <iframe width="350" height="200" src=https://www.youtube.com/embed/XIeCMhNWFQQ frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="text">Caption Three</div> -->
+      </div>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   </div>
+   <br>
+   <!-- The dots/circles -->
+   <div class="slider-dots" style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+   </div>
+   <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      // Next/previous controls
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      
+      // Thumbnail image controls
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+      }
+   </script>
+</body>
+</html>

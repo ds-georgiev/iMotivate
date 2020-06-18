@@ -1,0 +1,65 @@
+<%- include ('../templates/general/head') -%>
+<body>
+    <%- include ('../templates/header', {loggedIn : loggedIn, slectedIndex : 3}) -%>
+    
+    <div class="section">
+        <h1>Contact Us</h1>
+        <div class="login-signup">
+            <div class="form" style="padding-bottom: 10px;">
+                <div class="tab-content">
+                    <div id="signup" style="display: block !important;">
+                        <form action="">
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label class="first-name">
+                                    First Name<span class="req">*</span>
+                                    </label>
+                                    <input id="in-first-name" type="text" required autocomplete="off" />
+                                </div>
+                                <div class="field-wrap">
+                                    <label class="last-name">
+                                    Last Name<span class="req">*</span>
+                                    </label>
+                                    <input id="in-last-name" type="text" required autocomplete="off"/>
+                                </div>
+                            </div>
+                            <div class="field-wrap">
+                                <label>
+                                Email Address<span class="req">*</span>
+                                </label>
+                                <input id="in-email" type="email" required autocomplete="off"/>
+                            </div>
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                    Date of birth
+                                    </label>
+                                    <input id="in-date-birth" type="text" autocomplete="off"/>
+                                </div>
+                                <div class="field-wrap">
+                                    <label>
+                                    Phone
+                                    </label>
+                                    <input id="in-phone" type="text" autocomplete="off"/>
+                                </div>
+                            </div>
+                            <div class="field-wrap">
+                                <label class="question-label">
+                                Question<span class="req">*</span>
+                                </label>
+                                <textarea id="in-question" required autocomplete="off" rows="10"></textarea>
+                            </div>
+                            <div id="contact-button" class="button button-block">MAKE CONTACT</div>
+                        </form>
+                        <p id="alert-success" class="alert alert-success hidden">
+                            Thanks for contacting us!
+                        </p>
+                    </div>
+                </div>
+                <!-- tab-content -->
+            </div>
+            <!-- /form -->
+        </div>
+    </div>
+</body>
+</html>

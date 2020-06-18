@@ -1,0 +1,33 @@
+<%- include ('../templates/general/head') -%>
+    <body>
+        <%- include ('../templates/header', {loggedIn : loggedIn, slectedIndex : 0}) -%>
+
+        <div class="banner">
+            <img src="../../public/assets/images/mental_health.png" alt="">
+        </div>
+        
+        <div class="section">
+            <h1>Basic Idea</h1>
+            <div class="content">
+               <p>Interactive systems can have great potential to support people's mental or physical well-being. This support can be achieved amongst others through guided exercises, presented media content (visual and auditive) or through providing information/ monitoring well-being status and relevant activities. Design an interactive system that supports physical or mental well-being. <br><br> 
+                The main idea of our solution is to use physical exercise to stay mentally healthy. Using our platform users can follow their progress through the history tab or simply download reports (PDF) based on their activity. Having daily tips and quotes will help them improve their mental health and stay motivated. 	
+    
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>Key to success</h1>
+            <div class="content">
+                <%- include ('../templates/stories_slider') -%>
+            </div>
+        </div>
+
+        <div class="login-signup">
+            <%- include ('../templates/login_signup_form') -%>
+        </div>
+
+    </body>
+
+    <!-- <script src="/public/general.js"></script> -->
+</html>

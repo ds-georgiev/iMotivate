@@ -1,0 +1,23 @@
+.alert{
+    display: block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    &-error{
+        background: $bg-color-nav;
+        color: $white;
+    }
+    &-success{
+
+        display: block;
+        background: $alert-success;
+        color: $white;
+        transition: display 2s;
+        opacity: 1;
+        transition: opacity 2s;
+
+        &.hidden{
+            
+            opacity: 0;
+        }
+    }
+}

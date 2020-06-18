@@ -1,0 +1,91 @@
+<script type="text/javascript">
+    AmCharts.makeChart("chartdiv",
+        {
+            "type": "serial",
+            "categoryField": "category",
+            "autoMarginOffset": 40,
+            "marginRight": 60,
+            "marginTop": 60,
+            "colors": [
+                "#315e52"
+            ],
+            "startDuration": 1,
+            "color": "#551122",
+            "fontSize": 13,
+            "theme": "patterns",
+            "categoryAxis": {
+                "gridPosition": "start"
+            },
+            "trendLines": [],
+            "graphs": [
+                {
+                    "balloonText": "[[title]] of [[category]]:[[value]]",
+                    "bullet": "round",
+                    "bulletSize": 10,
+                    "id": "AmGraph-1",
+                    "lineAlpha": 1,
+                    "lineThickness": 3,
+                    "title": "graph 1",
+                    "type": "smoothedLine",
+                    "valueField": "column-1"
+                }
+            ],
+            "guides": [],
+            "valueAxes": [
+                {
+                    "id": "ValueAxis-1",
+                    "title": ""
+                }
+            ],
+            "allLabels": [],
+            "balloon": {},
+            "titles": [],
+            "dataProvider": [
+                {
+                    "category": "Day_1",
+                    "column-1": "50"
+                },
+                {
+                    "category": "Day_2",
+                    "column-1": "40"
+                },
+                {
+                    "category": "Day_3",
+                    "column-1": "60"
+                },
+                {
+                    "category": "Day_4",
+                    "column-1": "80"
+                },
+                {
+                    "category": "Day_5",
+                    "column-1": "20"
+                },
+                {
+                    "category": "Day_6",
+                    "column-1": "40"
+                },
+                {
+                    "category": "Day_7",
+                    "column-1": "60"
+                },
+                {
+                    "category": "Day_8",
+                    "column-1": "80"
+                },
+                {
+                    "category": "Day_9",
+                    "column-1": "100"
+                },
+                {
+                    "category": "Day_10",
+                    "column-1": "120"
+                }
+            ]
+        }
+    );
+</script>
+</head>
+<body>
+<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;border-radius: 25px;" ></div>
+</body>

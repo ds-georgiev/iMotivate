@@ -1,0 +1,31 @@
+<div class="header">
+    <nav>
+        <a id="0" class="" href="/">Home</a>
+        <a id="1" class="" href="/about">About</a>
+        <a id="2" class="" href="/stories">Stories</a>
+        <a id="3" class="" href="/contact">Contact</a>
+        <% if (!loggedIn) { %>
+            <a id="4" class="" href="/login">Login</a>
+            <a id="5" class="" href="/register">Register</a>
+        <% } else { %>
+            <a id="6" class="" href="/dashboard">Dashboard</a>
+            <a id="7" class="" href="" onclick="$('#logoutForm').submit(); return false;">Logout</a>
+        <% } %> 
+        <li class="slider">
+    </nav>
+    <form name='logoutForm' action='/logout?_method=DELETE' method='POST' style="display: none;">
+        <input type="hidden" name="h" value="s"/>
+    </form>
+</div>
+
+<% if (true) { %>
+    <script>
+        var slectedItem = document.getElementById("<%= slectedIndex %>");
+        slectedItem.setAttribute("class", "selected");
+
+
+        function DoPost(){
+            document.forms["logoutForm"].submit();
+        }
+    </script>
+<% } %>

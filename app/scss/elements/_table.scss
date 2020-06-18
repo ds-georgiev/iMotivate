@@ -1,0 +1,24 @@
+#history {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    border: 1px solid #685b50;
+}
+
+#history td, #history th {
+
+    padding: 8px;
+}
+
+#history tr:nth-child(even){background-color: #685b50;}
+
+#history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $bg-color-dark-theme;
+    color: white;
+}
+
+  

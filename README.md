@@ -1,2 +1,1 @@
-# iMotivate
-HCI Group 5
+# README #

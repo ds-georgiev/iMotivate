@@ -1,0 +1,41 @@
+<%- include ('../templates/general/head') -%>
+    <body>
+        <%- include ('../templates/header', {loggedIn : loggedIn, slectedIndex : 4}) -%>
+        <h1>Welcome Back!</h1>
+            
+        <div class="login-signup">
+            <div class="form">
+                <div class="tab-content">
+
+                    <div id="login" style="display: block!important;">
+                        
+                        <form action="/login" method="post">
+                            <div class="field-wrap">
+                                <label>
+                                Email Address<span class="req">*</span>
+                                </label>
+                                <input type="email" required autocomplete="off" name="user_email"/>
+                            </div>
+                            <div class="field-wrap">
+                                <label>
+                                Password<span class="req">*</span>
+                                </label>
+                                <input type="password" required autocomplete="off" name="user_password"/>
+                            </div>
+                            <% if(messages.error){ %> 
+                                <p class="alert alert-error">
+                                    <%= messages.error %> 
+                                </p>
+                            <% } %> 
+                            <button class="button button-block"/>Log In</button>
+                        </form>
+                    </div>
+                   
+                </div>
+                <!-- tab-content -->
+            </div>
+            <!-- /form -->
+        </div>
+
+    </body>
+</html> 

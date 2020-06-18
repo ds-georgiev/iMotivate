@@ -1,0 +1,138 @@
+<%- include ('../templates/general/head') -%>
+    <body>
+        <%- include ('../templates/header', {loggedIn : loggedIn, slectedIndex : 6}) -%>
+        <h1>Hello <%= user.first_name %>! Enjoy your dashobard :)</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 card user-info">
+                    <%- include ('../templates/user_profile') -%>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="motivation-wrapper card">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="tips-wrapper card">
+                    </div>
+                </div>
+            </div>
+            <div class="row dashboard-wrapper">
+                <div class="col-12 col-md-4 p-0">
+                    <div class="exercise-button card card--green content-trigger" data-target="exercise">
+                        <p>START EXERCISE</p>
+                    </div>
+                    <div class="menu card">
+                        <h4>SELECT AN OPTION</h4>
+                        <nav>
+                            <a id="10" class="content-trigger selected" data-target="history" href="#">History</a>
+                            <a id="11" class="content-trigger" data-target="progress" href="#">Progress</a>
+                            <a id="12" class="content-trigger" data-target="report" target="_blank" href="/public/data/report.pdf">Report</a>
+                            <li class="slider">
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="content-card card">
+                        <div class="content-wrapper history" data-content="history">
+                            <%- include ('../templates/table') -%>
+                        </div>
+                        <div class="content-card content-wrapper hide progress" data-content="progress">
+                            <%- include ('../templates/graph') -%>
+                            <div class="general-info card">
+                                <h2>Basic Info</h2>
+
+                                <div class="average-points">
+                                    <h4>Average points</h4>
+                                    <div class="points"> 56 points</div>
+                                </div>
+
+                                <div class="best-points">
+                                    <h4>Best score</h4>
+                                    <div class="points"> 120 points</div>
+                                </div>
+
+                                <div class="total-points">
+                                    <h4>Total points</h4>
+                                    <div class="points"> 560 points</div>
+                                </div>
+                            </div>
+                            <div class="feedback card">
+                                <h2>Good job!</h2>
+                                <i>Out of suffering have emerged the strongest souls; the most massive characters are seared with scars.<br><br>- Khalil Gibran</i>
+                            </div>
+                        </div>
+                        <div class="content-wrapper hide" data-content="exercise">
+                            <div class="row">
+                                <div class="col-12 col-md-7">
+                                    <iframe id="main-video" width="100%" height="315" src="https://www.youtube.com/embed/H0YBDXB8dv4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <div class="card">
+                                        <h3 class="text-center">Track "Happy Toughts" <span>Advanced</span></h3>
+                                        <p>Exercise is a powerful fighter for several reasons. Most importantly, it promotes all kinds of changes in the brain, including neural growth, reduced inflammation, and new activity patterns that promote feelings of calm and well-being. It also releases endorphins, powerful chemicals in your brain that energize your spirits and make you feel good. Finally, exercise can also serve as a distraction, allowing you to find some quiet time to break out of the cycle of negative thoughts.</p>
+                                        <h2 class="points-holder"></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div clas="row">
+                                <div class="col-12">
+                                    <p class="text-center">
+                                        <b>Up/Next Queue</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/c-xUk444SWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/fc8ni8wgp_M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/F47hdaNXwT4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-wrapper hide" data-content="user">
+                            <div class="row" style="display: contents;">
+                                <div class="login-signup">
+                                    <div class="form">
+                                        <div id="editForm">
+                                            <form action="/edit-user" method="post">
+                                                <div class="top-row">
+                                                    <div class="field-wrap">
+                                                        <label class="first-name">
+                                                        First Name
+                                                        </label>
+                                                        <input id="in-first-name" name="user_first_name" value="<%= user.first_name %>" type="text" autocomplete="off" />
+                                                    </div>
+                                                    <div class="field-wrap">
+                                                        <label class="last-name">
+                                                        Last Name
+                                                        </label>
+                                                        <input id="in-last-name" name="user_last_name" value="<%= user.last_name %>" type="text" autocomplete="off"/>
+                                                    </div>
+                                                </div>
+                                                <div class="field-wrap">
+                                                    <label class="u-email">
+                                                    Email Address
+                                                    </label>
+                                                    <input id="in-email" name="user_email" value="<%= user.email %>" type="email" autocomplete="off"/>
+                                                </div>
+                                                <input name="user_id" value="<%= user.id %>" type="hidden"/>
+                                                <button type="submit" class="button button-block"/>CHANGE DATA</button>
+                                            </form>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- <form action="/logout" method="POST">
+            <button type="submit">Log Out?</button>
+        </form> -->
+    </body>
+</html>
