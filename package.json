@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "bootstrap-4-grid": "^3.4.0",
     "bootstrap-alertbox": "^1.0.3",
     "ejs": "^3.1.3",
